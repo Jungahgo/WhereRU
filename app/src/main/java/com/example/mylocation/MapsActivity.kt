@@ -92,7 +92,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         mMap.setOnMarkerClickListener(this)
         setUpMap()
         //주변 건물 마커 활성화
-        placeMarkerOnMap(LatLng(37.498919, 126.950795))
+        setUpBuildingMarker()
+    }
+
+    private fun setUpBuildingMarker(){
+
+        placeMarkerOnMap(LatLng(37.496570, 126.954307), "문화관")
+        placeMarkerOnMap(LatLng(37.496908, 126.954876), "숭덕경상관")
+        placeMarkerOnMap(LatLng(37.496887, 126.956836), "학생회관")
+        placeMarkerOnMap(LatLng(37.495724, 126.956151), "형남공학관")
+        placeMarkerOnMap(LatLng(37.495757, 126.955034), "안익태기념관")
+
+
+
+
     }
 
     private fun setUpMap(){
@@ -108,16 +121,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 lastLocation = location
                 Log.d("check", lastLocation.toString())
                 val currentLatLong = LatLng(location.latitude, location.longitude)
-                placeMarkerOnMap(currentLatLong)
+                placeMarkerOnMap(currentLatLong, "현위치")
                 friendMarkerOnMap()
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 12f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 15f))
             }
         }
     }
 
-    private fun placeMarkerOnMap(currentLatLong: LatLng){
+    private fun placeMarkerOnMap(currentLatLong: LatLng, building: String){
         val markerOptions = MarkerOptions().position(currentLatLong)
-        markerOptions.title("$currentLatLong")
+        markerOptions.title(building)
         mMap.addMarker(markerOptions)
     }
 
