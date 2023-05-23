@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutListItem"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:backgroundTint="@color/white"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="100dp">
+
+        <ImageView
+            android:id="@+id/item_map_signal_list_default_profile_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_profile"
+            android:scaleType="fitXY" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/item_map_signal_list_default_nickname_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp">
+
+        <TextView
+            android:id="@+id/item_map_signal_list_default_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나와 532m"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_map_signal_list_default_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:text="1분전"
+            android:textSize="10sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>
