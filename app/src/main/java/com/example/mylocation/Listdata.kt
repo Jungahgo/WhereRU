@@ -4,8 +4,8 @@ data class Listdata(
     var checkSigWrite: Int = SignalMode.DEFAULT,
     //var profileImg: String,
     var nickName: String? = null,
-    var sigPromiseTime: String? = null,
-    var sigPromiseArea: String? = null,
+    var location: String? = null,
+    var updateTime: String? = null,
 )
 
 object SignalMode{

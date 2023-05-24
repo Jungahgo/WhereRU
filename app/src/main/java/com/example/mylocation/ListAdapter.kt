@@ -26,6 +26,8 @@ class ListAdapter(private var signalList : ArrayList<Listdata>) : RecyclerView.A
         fun bind(signal : Listdata){
             //binding.itemMapSignalListDefaultProfileIv.setImageResource(signal.profileImageUrl!!)
             binding.itemMapSignalListDefaultNicknameTv.text = signal.nickName
+            binding.itemMapSignalListDefaultLocationTv.text = signal.location
+            binding.itemMapSignalListDefaultTimeTv.text = signal.updateTime
         }
     }
 

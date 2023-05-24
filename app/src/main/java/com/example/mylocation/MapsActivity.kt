@@ -64,6 +64,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
             val intent = Intent(this, CameraActivity::class.java)
             startActivity(intent)
         }
+        //friend list btn
+        val friendBtn = findViewById<CardView>(R.id.friend_btn)
+        friendBtn.setOnClickListener {
+            val intent = Intent(this, ListActivity::class.java)
+            startActivity(intent)
+        }
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
     }
 
@@ -104,8 +110,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         placeMarkerOnMap(LatLng(37.495757, 126.955034), "안익태기념관")
 
 
-
-
     }
 
     private fun setUpMap(){
@@ -121,9 +125,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 lastLocation = location
                 Log.d("check", lastLocation.toString())
                 val currentLatLong = LatLng(location.latitude, location.longitude)
-                placeMarkerOnMap(currentLatLong, "현위치")
+                //placeMarkerOnMap(currentLatLong, "현위치")
                 friendMarkerOnMap()
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 15f))
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLong, 16f))
             }
         }
     }

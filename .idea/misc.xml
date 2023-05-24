@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/activity_camera.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_list.xml" value="0.30416666666666664" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.15114288330078127" />
+        <entry key="app/src/main/res/layout/dialog.xml" value="0.125" />
         <entry key="app/src/main/res/layout/item_list_default.xml" value="0.30416666666666664" />
       </map>
     </option>

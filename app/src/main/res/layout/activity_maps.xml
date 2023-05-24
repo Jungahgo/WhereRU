@@ -17,7 +17,29 @@
         android:layout_width="150px"
         android:layout_height="150px"
         android:id="@+id/camera_btn"
+        android:elevation="6dp"
+        app:cardCornerRadius="100dp"
+        app:cardBackgroundColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_camera"
+            tools:ignore="MissingConstraints"
+            app:tint="@color/white"
+            android:layout_margin = "13dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:id="@+id/friend_btn"
+        app:layout_constraintBottom_toTopOf="@+id/camera_btn"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="6dp"
         app:cardCornerRadius="100dp"
@@ -28,14 +50,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/icon_camera"
+            android:src="@drawable/icon_friends"
             tools:ignore="MissingConstraints"
             app:tint="@color/white"
             android:layout_margin = "13dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"  />
+            app:layout_constraintStart_toEndOf="@+id/camera_btn"/>
 
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
